@@ -59,6 +59,6 @@ for hacker in jsonData:
 		conn.commit()
 
 
-
+print("finished creating database")
 
 
