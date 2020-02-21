@@ -17,7 +17,7 @@ I have 2 main tables, 1 junction table and 1 "hidden" table(used to assign uniqu
 
 ## How to Run
 
-Once you download the file, activate the virtual enviroment and create the database by running: 
+Once you download the file, create the database by running: 
 ```
 pip3 create-database.py
 ```
