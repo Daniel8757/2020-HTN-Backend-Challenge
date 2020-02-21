@@ -13,7 +13,7 @@ Here's my submission for HTN-2020 Backend Coding Challenge. Hope you enjoy! My f
 
 ## Database
 
-I have 2 main tables, 1 junction table and 1 "hidden" table(used to assign unique ID's to hackers and events). The 2 main tables model the data of hackers and events, while the junction table models the many-to-many relationships between hackers and events. The hidden table is autocreated if you use autoincrement, and helps with assigning unique IDs to all hackers and events.
+I have 2 main tables, 1 junction table and 1 "hidden" table. The 2 main tables model the data of hackers and events, while the junction table models the many-to-many relationships between hackers and events. The "hidden" table is autocreated if you use autoincrement, and helps with assigning unique IDs to all hackers and events.
 
 ## How to Run
 
@@ -26,7 +26,7 @@ Then, run:
 ```
 python3 app.py
 ```
-Which should start the flask server on port 5000.
+Which starts the flask server on port 5000.
 
 ### Endpoints
 #### Note that the JSON data is sorted alphabetically, so when testing things like events, make sure to scroll to the bottom of attendees to find the eventid and event name
@@ -53,7 +53,7 @@ This indicates that the user tried to add a hacker that does not exist to an eve
 This indicates that the user tried to search for an event or hacker that does not exist(hackerid or eventid not found in table<br />
 
 ## What I would do add if I had more time
-- In a real world setting, a user refraining from inputting longitude, latitude, or range might've done it by accident and a valid response may case trouble, so I would require more specific inputs if a user wanted to only use longitude or latitude
-- I would use SQLAlchemy to simplify a lot of things. I chose not to in this project because I wanted to demonstrate my ability to utilize SQL queries without imports
-- When I load attendees for events, I chose not to add the attendee's events because I felt that it was a bit redundant, but I could create an option for users to see it when loading events
-- I would add ways to delete users from events, add users to database, add events to database, and create more endpoints to identify users(for example, if we only had the user's name)
+- In a real world setting, a user refraining from inputting longitude, latitude, or range might've done it by accident and a valid reponse may cause trouble, so I would require more specific inputs if a user wanted to only use longitude or latitude
+- I would use SQLAlchemy to simplify a lot of things. I chose not to in this project because I wanted to demonstrate my ability to utilize SQL queries with SQL commands
+- When I load attendees for events, I chose not to add the attendee's events because I felt that it was a bit redundant, but I could create an option for users to see it if they wanted to
+- I would add ways to delete users from events, add users to database, add events to database, and create more endpoints to identify users(for example, if we only had the user's name, then you could search up all users with that name)
