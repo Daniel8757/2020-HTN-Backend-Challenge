@@ -1,4 +1,4 @@
-#Hack the North 2020 Backend Coding Challenge
+# Hack the North 2020 Backend Coding Challenge
 ## Summary
 
 Here's my submission for HTN-2020 Backend Coding Challenge. Hope you enjoy! My features are:
@@ -37,11 +37,11 @@ Returns all users within one range of the longitude and latitude. Note that if r
 `GET /users/<int:id>`<br />
 Returns one user with the unique id<br />
 `GET /events`<br />
-returns all events<br />
+Returns all events<br />
 `GET /events/<int:id>`<br />
-returns one event with the unique id<br />
+Returns one event with the unique id<br />
 `GET /events/<int:id>/attendees`<br />
-returns an html page where you can add users to events with that id<br />
+Returns an html page where you can add users to events with that id<br />
 `POST /events/<int:id>/attendees`<br />
 takes JSON data of the form:<br />
 `{"user_id": 1}`<br />
