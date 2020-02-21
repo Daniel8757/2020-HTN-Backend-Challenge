@@ -30,27 +30,27 @@ Which should start the flask server on port 5000.
 
 ### Endpoints
 #### Note that the JSON data is sorted alphabetically, so when testing things like events, make sure to scroll to the bottom of attendees to find the eventid and event name
-`GET /users`
-Returns all users
-`GET /users?lat=48.473000&long=-34.736000&range=0.1`
-Returns all users within one range of the longitude and latitude. Note that if range is not specified, it returns all users, and if either latitude or longitude or latitude is not specified, it only uses the other value(so if longitude is not specified, it returns all hackers of latitude within the range
-`GET /users/<int:id>`
-Returns one user with the unique id
-`GET /events`
-returns all events
-`GET /events/<int:id>`
-returns one event with the unique id
-`GET /events/<int:id>/attendees`
-returns an html page where you can add users to events with that id
-`POST /events/<int:id>/attendees`
-takes JSON data of the form:
-`{"user_id": 1}`
-and adds the user to that event
-### Input Restrictions and Reponses
-`Status: 400`
-This indicates that the user tried to add a hacker that does not exist to an event(hackerid not found in table)
-`Status: 404`
-This indicates that the user tried to search for an event or hacker that does not exist(hackerid or eventid not found in table
+`GET /users`<br />
+Returns all users<br />
+`GET /users?lat=48.473000&long=-34.736000&range=0.1`<br />
+Returns all users within one range of the longitude and latitude. Note that if range is not specified, it returns all users, and if either latitude or longitude or latitude is not specified, it only uses the other value(so if longitude is not specified, it returns all hackers of latitude within the range<br />
+`GET /users/<int:id>`<br />
+Returns one user with the unique id<br />
+`GET /events`<br />
+returns all events<br />
+`GET /events/<int:id>`<br />
+returns one event with the unique id<br />
+`GET /events/<int:id>/attendees`<br />
+returns an html page where you can add users to events with that id<br />
+`POST /events/<int:id>/attendees`<br />
+takes JSON data of the form:<br />
+`{"user_id": 1}`<br />
+and adds the user to that event<br />
+### Input Restrictions and Reponses<br />
+`Status: 400`<br />
+This indicates that the user tried to add a hacker that does not exist to an event(hackerid not found in table)<br />
+`Status: 404`<br />
+This indicates that the user tried to search for an event or hacker that does not exist(hackerid or eventid not found in table<br />
 
 ## What I would do add if I had more time
 - In a real world setting, a user refraining from inputting longitude, latitude, or range might've done it by accident and a valid response may case trouble, so I would require more specific inputs if a user wanted to only use longitude or latitude
