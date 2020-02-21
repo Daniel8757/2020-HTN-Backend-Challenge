@@ -19,12 +19,12 @@ I have 2 main tables, 1 junction table and 1 "hidden" table(used to assign uniqu
 
 Once you download the file, create the database by running: 
 ```
-pip3 create-database.py
+python3 create-database.py
 ```
 Note that this file should only be run once. If you want to start fresh, then you can delete the database (named "hackers.db") and run the above command again. 
 Then, run:
 ```
-pip3 app.py
+python3 app.py
 ```
 Which should start the flask server on port 5000.
 
