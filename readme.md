@@ -28,8 +28,8 @@ pip3 app.py
 ```
 Which should start the flask server on port 5000.
 
-###Endpoints
-####Note that the JSON data is sorted alphabetically, so when testing things like events, make sure to scroll to the bottom of attendees to find the eventid and event name
+### Endpoints
+#### Note that the JSON data is sorted alphabetically, so when testing things like events, make sure to scroll to the bottom of attendees to find the eventid and event name
 `GET /users`
 Returns all users
 `GET /users?lat=48.473000&long=-34.736000&range=0.1`
@@ -46,7 +46,7 @@ returns an html page where you can add users to events with that id
 takes JSON data of the form:
 `{"user_id": 1}`
 and adds the user to that event
-###Input Restrictions and Reponses
+### Input Restrictions and Reponses
 `Status: 400`
 This indicates that the user tried to add a hacker that does not exist to an event(hackerid not found in table)
 `Status: 404`
